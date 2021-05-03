@@ -1,10 +1,13 @@
 # KD2 Lab 360 Tour
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
+To start off with Angular, see [here](https://angular.io/start).
 
-## Development server
+## Development
 
-First install Node.js (version 15) on your development machine.
+First install [Node.js](https://nodejs.org/en/) (version 15) on your development machine.
+Clone the GitHub project to a local folder.
+In your prefered console, navigate to the folder and run `npm i` to install all dependencies.
 Then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
