@@ -57,8 +57,9 @@
 // /***
 //  * Aframe
 //  */
-// import 'aframe';
-// import 'aframe-extras';
+import 'aframe';
+import 'aframe-extras';
+import 'aframe-event-set-component';
 // import 'aframe-template-component';
 // import 'aframe-look-at-component';
 // import 'aframe-proxy-event-component';

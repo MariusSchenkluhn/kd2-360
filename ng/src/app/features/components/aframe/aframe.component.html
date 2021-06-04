@@ -45,7 +45,13 @@
     <!-- Media -->
     <img id="img-poster" crossorigin="anonymous" src="assets/media/poster.png" alt="Picture">
     <audio id="song" crossorigin="anonymous" src="assets/media/audio/sound.mp3"></audio>
+    <audio id="audio_kd2" crossorigin="anonymous" src="assets/media/audio/Info_KD2Lab.mp3"></audio>
+    <audio id="audio_weinh" crossorigin="anonymous" src="assets/media/audio/Info_Weinhardt.mp3"></audio>
     <video id="vid" crossorigin="anonymous" src="https://bitmovin.com/player-content/playhouse-vr/progressive.mp4" preload="auto"></video>
+    <a-asset-item id="person3D_a" crossorigin="anonymous" src="assets/media/person_test_07.gltf"></a-asset-item>
+    <img id="spc-00" crossorigin="anonymous" src="assets/media/Speech_00.png" alt="Picture">
+    <img id="MabPers" crossorigin="anonymous" src="assets/media/MoreAbtPerson.png" alt="Picture">
+    <img id="MabKD2" crossorigin="anonymous" src="assets/media/MoreAbtKD2.png" alt="Picture">
 
 
     <!-- Mixins -->
@@ -54,6 +60,9 @@
     <a-mixin id="m-link"
              geometry="primitive: plane; height: .5; width: .5"
              material="shader: flat; opacity: 0"
+             visible="true"
+             sound="on: click; src: #click-sound"></a-mixin>
+    <a-mixin id="com-link"
              visible="true"
              sound="on: click; src: #click-sound"></a-mixin>
     <a-mixin id="menu-animations"
@@ -69,6 +78,7 @@
     </a-mixin>
     <a-mixin id="m-audio" opacity=".5" shader="flat" color="#666" height=".5" width=".5">
     </a-mixin>
+    <a-mixin id="button" look-at="[camera]" shader="flat" sound="on: click; src: #click-sound"></a-mixin>
 
   </a-assets>
 
@@ -96,6 +106,38 @@
       <a-entity position="-2 0 -2" look-at="[camera]" audio="name: Audio #1; text: Musik starten">
         <a-entity sound="src:#song" class="pause-on-jump"></a-entity>
       </a-entity>
+
+      <!-- 3D Person Test -->
+      <!-- <a-box *ngFor="let b of vrBoxes" position="-1 1.5 -4"  scale="0.25 0.5 1" rotation="-45 0 0" color="#4CC3D9"></a-box> -->
+      <a-entity *ngFor="let b of gltfModels" id="person3D_id" gltf-model="#person3D_a" animation-mixer="clip: LookAround; crossFadeDuration: 0.5" position="-2.6 -2 -4.5" scale="4 4 4" interact>
+        <a-plane class="hover" opacity="0" shader="flat" color="#666" position="-0.05 0.2 0" look-at="[camera]" width="0.25" height="0.65" visible="false">
+          <a-plane class="link" mixin="m-link" look-at="[camera]" position="0 0.5 0" height="0.5" width="0.944" communicate>
+            <a-image src="#spc-00" width="0.944" height="0.5"></a-image>
+
+            <a-entity visible="false" position="0 0 0.1">
+              <a-plane class="link" mixin="m-link" scale="1.318 0.418 0" position="0 0.18 0.05" click-com sound="src:#audio_weinh; on: null">
+                <a-image class="hover" src="#MabPers" scale="0.5 0.5 0" data-xpos="0" hover-com>
+                </a-image>
+              </a-plane>
+              <a-plane class="link" mixin="m-link" scale="1.318 0.418 0" position="0 -0.06 0.05" click-com sound="src:#audio_kd2; on: null">
+                <a-image class="hover" src="#MabKD2" scale="0.5 0.5 0" data-xpos="0" hover-com>
+                </a-image>
+              </a-plane>
+            </a-entity>
+
+            <a-entity position=".38 .17 .2" scale=".4 .4 .4">
+                <a-entity
+                class="link"
+                button="imageSrc: #icon-minimize; text: "
+                close-com
+                mixin="m-link hover-scale"></a-entity>
+                <a-circle radius=".12" position="0 .0375 0" color="#666" shader="flat" opacity="1"></a-circle>
+            </a-entity>
+          </a-plane>
+        </a-plane>
+      </a-entity>
+
+      <a-entity id="GLTF-Test"></a-entity>
     </a-entity>
   </a-entity>
 

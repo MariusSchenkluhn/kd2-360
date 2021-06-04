@@ -2,12 +2,33 @@ import {Injectable} from '@angular/core';
 import {AnalyticsService} from './analytics.service';
 import {EventType} from '../models/event-type.enum';
 
+import {
+  AnimationMixer,
+  Clock,
+  Color,
+  DirectionalLight,
+  HemisphereLight,
+  Mesh,
+  MeshStandardMaterial,
+  PerspectiveCamera,
+  Scene,
+  Vector3,
+  WebGLRenderer
+} from 'three';
+
+import {
+  GLTF,
+  GLTFLoader
+} from 'three/examples/jsm/loaders/GLTFLoader';
+
 @Injectable({
   providedIn: 'root'
 })
 export class MediaService {
 
   private isRegistered = false;
+  loader: GLTFLoader;
+  scene: Scene;
 
   constructor(
     private analytics: AnalyticsService
@@ -18,6 +39,72 @@ export class MediaService {
     if (!this.isRegistered) {
       this.isRegistered = true;
       const context = this;
+
+      AFRAME.registerComponent('interact', {
+
+        init(): void {
+          const self = this.el;
+          this.el.addEventListener('mouseenter', (e) => {
+            self.children[0].setAttribute('visible', 'true');
+            self.setAttribute('animation-mixer', 'clip: Greeting');
+          });
+          this.el.addEventListener('mouseleave', () => {
+            // this.el.children[0].setAttribute('visible', 'false');
+            self.setAttribute('animation-mixer', 'clip: LookAround');
+          });
+        },
+      });
+
+      AFRAME.registerComponent('communicate', {
+
+        init(): void {
+          const self = this.el;
+          this.el.addEventListener('click', (e) => {
+            self.children[1].setAttribute('visible', 'true');
+            self.removeAttribute('class');
+          });
+          this.el.addEventListener('mouseleave', () => {
+            // this.el.children[0].setAttribute('visible', 'false');
+          });
+        },
+      });
+
+      AFRAME.registerComponent('hover-com', {
+
+        init(): void {
+          const self = this.el;
+          this.el.addEventListener('mouseenter', (e) => {
+            self.setAttribute('scale', '0.55 0.55 0');
+          });
+          this.el.addEventListener('mouseleave', () => {
+            self.setAttribute('scale', '0.5 0.5 0');
+          });
+        },
+      });
+
+      AFRAME.registerComponent('click-com', {
+
+        init(): void {
+          const self = this.el;
+          this.el.addEventListener('click', () => {
+            if (self.parentElement.getAttribute('visible') === true) {
+              self.components.sound.playSound();
+            }
+          });
+        },
+      });
+
+      AFRAME.registerComponent('close-com', {
+
+        init(): void {
+          this.el.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.el.parentElement.parentElement.parentElement.setAttribute('visible', 'false');
+            this.el.parentElement.parentElement.children[1].setAttribute('visible', 'false');
+            this.el.parentElement.parentElement.className = 'link';
+          });
+        },
+      });
 
       AFRAME.registerComponent('poster', {
         schema: {
@@ -268,6 +355,47 @@ export class MediaService {
           this.videoSrc.pause();
 
           context.analytics.trackEvent(EventType.StopPOI, this.data.name);
+        }
+      });
+
+      AFRAME.registerComponent('model', {
+        schema: {
+          name: {type: 'string'},
+          /*animation: {type: 'string'}*/
+        },
+
+        init(): void {
+
+          const self = this;
+          this.el.setAttribute('opacity', '0');
+          this.defaultHeight = this.el.getAttribute('height');
+          this.defaultWidth = this.el.getAttribute('width');
+
+          const model = this.el.children[0];
+
+          /*this.el.addEventListener('mouseenter', () => {
+            if (self.data.useIcon) {
+              poster.setAttribute('scale', '1 1 1');
+              const coord = self.data.moveIcon;
+              coord.z = .01;
+              icon.setAttribute('position', coord);
+              self.el.setAttribute('opacity', '0');
+              self.el.setAttribute('height', poster.getAttribute('height'));
+              self.el.setAttribute('width', poster.getAttribute('width'));
+            }
+          });
+
+          this.el.addEventListener('mouseleave', () => {
+            if (self.data.useIcon) {
+              self.el.setAttribute('height', self.defaultHeight);
+              self.el.setAttribute('width', self.defaultWidth);
+              poster.setAttribute('scale', '.0001 .0001 .0001');
+              icon.setAttribute('position', '0 0 .01');
+              self.el.setAttribute('opacity', '.5');
+            }
+          });*/
+
+
         }
       });
     }
