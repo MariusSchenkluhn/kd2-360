@@ -63,7 +63,8 @@ export class SnowService {
               document.getElementById('curtain').emit('fadelong');
 
               setTimeout(() => {
-                document.getElementById('sky-55').setAttribute('initial-sphere', 'next: 52, 57');
+                // document.getElementById('sky-55').setAttribute('initial-sphere', 'next: 52, 57');
+                document.getElementById('sky-p0').setAttribute('initial-sphere', 'next: p1');
 
                 document.getElementById('welcome').setAttribute('visible', 'false');
 

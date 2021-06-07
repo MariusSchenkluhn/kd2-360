@@ -40,6 +40,21 @@ export class MediaService {
       this.isRegistered = true;
       const context = this;
 
+      AFRAME.registerComponent('cull', {
+
+        init(): void {
+          const self = this.el;
+          this.el.addEventListener('model-loaded', () => {
+            const model = this.el.getObject3D('mesh');
+            model.traverse((node) => {
+              if (node.isMesh) {
+                node.frustumCulled = false;
+              }
+            });
+          });
+        },
+      });
+
       AFRAME.registerComponent('interact', {
 
         init(): void {

@@ -6,6 +6,8 @@
            src="assets/media/audio/click.ogg" preload="auto"></audio>
 
     <img id="img-map" crossorigin="anonymous" src="assets/map.png" alt="Picture">
+
+    <!-- Alte Bilder
     <img id="img-55" crossorigin="anonymous" src="assets/pics/R0010055.JPG" alt="Picture">
     <img id="img-52" crossorigin="anonymous" src="assets/pics/R0010052.JPG" alt="Picture">
     <img id="img-56" crossorigin="anonymous" src="assets/pics/R0010056.JPG" alt="Picture">
@@ -30,6 +32,43 @@
     <img id="img-61" crossorigin="anonymous" src="assets/pics/R0010061.JPG" alt="Picture">
     <img id="img-62" crossorigin="anonymous" src="assets/pics/R0010062.JPG" alt="Picture">
     <img id="img-65" crossorigin="anonymous" src="assets/pics/R0010065.JPG" alt="Picture">
+    -->
+
+    <!-- Neue Lab Bilder -->
+    <img id="p0" crossorigin="anonymous" src="assets/pics/P0_0.JPG" alt="Picture">
+    <img id="p1" crossorigin="anonymous" src="assets/pics/P1_0.JPG" alt="Picture">
+    <img id="p2" crossorigin="anonymous" src="assets/pics/P2_0.JPG" alt="Picture">
+    <img id="p3" crossorigin="anonymous" src="assets/pics/P3_0.JPG" alt="Picture">
+    <img id="p4" crossorigin="anonymous" src="assets/pics/P4_0.JPG" alt="Picture">
+    <img id="p5" crossorigin="anonymous" src="assets/pics/P5_0.JPG" alt="Picture">
+    <img id="p6" crossorigin="anonymous" src="assets/pics/P6_0.JPG" alt="Picture">
+    <img id="p7" crossorigin="anonymous" src="assets/pics/P7_0.JPG" alt="Picture">
+    <img id="p8" crossorigin="anonymous" src="assets/pics/P8_0.JPG" alt="Picture">
+    <img id="p9" crossorigin="anonymous" src="assets/pics/P9_0.JPG" alt="Picture">
+    <img id="p10" crossorigin="anonymous" src="assets/pics/P10_0.JPG" alt="Picture">
+    <img id="p11" crossorigin="anonymous" src="assets/pics/P11_0.JPG" alt="Picture">
+    <img id="p13" crossorigin="anonymous" src="assets/pics/P13_0.JPG" alt="Picture">
+    <img id="p14" crossorigin="anonymous" src="assets/pics/P14_0.JPG" alt="Picture">
+    <img id="p15" crossorigin="anonymous" src="assets/pics/P15_0.JPG" alt="Picture">
+    <img id="p16" crossorigin="anonymous" src="assets/pics/P16_0.JPG" alt="Picture">
+    <img id="p17" crossorigin="anonymous" src="assets/pics/P17_0.JPG" alt="Picture">
+    <img id="p18" crossorigin="anonymous" src="assets/pics/P18_0.JPG" alt="Picture">
+    <img id="p19" crossorigin="anonymous" src="assets/pics/P19_0.JPG" alt="Picture">
+    <img id="p20" crossorigin="anonymous" src="assets/pics/P20_0.JPG" alt="Picture">
+    <img id="p21" crossorigin="anonymous" src="assets/pics/P21_0.JPG" alt="Picture">
+    <img id="p22" crossorigin="anonymous" src="assets/pics/P22_M21.JPG" alt="Picture">
+    <img id="p23" crossorigin="anonymous" src="assets/pics/P23_0.JPG" alt="Picture">
+    <img id="p24" crossorigin="anonymous" src="assets/pics/P24_0.JPG" alt="Picture">
+    <img id="p25" crossorigin="anonymous" src="assets/pics/P25_0.JPG" alt="Picture">
+    <img id="p26" crossorigin="anonymous" src="assets/pics/P26_T.JPG" alt="Picture">
+    <img id="p27" crossorigin="anonymous" src="assets/pics/P27_0.JPG" alt="Picture">
+    <img id="p28" crossorigin="anonymous" src="assets/pics/P28_T.JPG" alt="Picture">
+    <img id="p29" crossorigin="anonymous" src="assets/pics/P29_0.JPG" alt="Picture">
+    <img id="p30" crossorigin="anonymous" src="assets/pics/P30_0.JPG" alt="Picture">
+    <img id="p31" crossorigin="anonymous" src="assets/pics/P31_0.JPG" alt="Picture">
+    <img id="p32" crossorigin="anonymous" src="assets/pics/P32_T.JPG" alt="Picture">
+    <img id="p33" crossorigin="anonymous" src="assets/pics/P33_0.JPG" alt="Picture">
+    <img id="p34" crossorigin="anonymous" src="assets/pics/P34_0.JPG" alt="Picture">
 
     <!-- Icons -->
     <img id="icon-signup" crossorigin="anonymous" src="assets/icons/signup.png" alt="Picture">
@@ -48,7 +87,8 @@
     <audio id="audio_kd2" crossorigin="anonymous" src="assets/media/audio/Info_KD2Lab.mp3"></audio>
     <audio id="audio_weinh" crossorigin="anonymous" src="assets/media/audio/Info_Weinhardt.mp3"></audio>
     <video id="vid" crossorigin="anonymous" src="https://bitmovin.com/player-content/playhouse-vr/progressive.mp4" preload="auto"></video>
-    <a-asset-item id="person3D_a" crossorigin="anonymous" src="assets/media/person_test_07.gltf"></a-asset-item>
+    <a-gltf-model id="person3D_a" crossorigin="anonymous" src="assets/media/person_test_07.gltf"></a-gltf-model>
+    <a-gltf-model id="robot" crossorigin="anonymous" src="assets/media/robot.gltf"></a-gltf-model>
     <img id="spc-00" crossorigin="anonymous" src="assets/media/Speech_00.png" alt="Picture">
     <img id="MabPers" crossorigin="anonymous" src="assets/media/MoreAbtPerson.png" alt="Picture">
     <img id="MabKD2" crossorigin="anonymous" src="assets/media/MoreAbtKD2.png" alt="Picture">
@@ -82,12 +122,6 @@
 
   </a-assets>
 
-  <!--  Foyer  -->
-  <a-entity id="sky-52" position="-4 0 0" data-text="Foyer" nav="next: 55, 56, 57, 51">
-    <a-sky mixin="m-sky" src="#img-52" rotation="0 -90 0"></a-sky>
-    <a-entity class="payload"></a-entity>
-  </a-entity>
-
   <a-entity id="sky-55" position="0 0 0" data-text="Eingang" nav="next: 52, 56, 57" click-nav>
     <a-sky mixin="m-sky" src="#img-55" rotation="0 180 0"></a-sky>
     <a-entity class="payload">
@@ -107,9 +141,36 @@
         <a-entity sound="src:#song" class="pause-on-jump"></a-entity>
       </a-entity>
 
+
+
+      <a-entity id="GLTF-Test"></a-entity>
+    </a-entity>
+  </a-entity>
+
+  <!-- Neue Bilder Start -->
+
+  <!-- Eingansbereich -->
+  <a-entity id="sky-p0" position="0 0 0" data-text="Eingangsbereich" nav="next: p1">
+    <a-sky mixin="m-sky" src="#p0" rotation="0 90 0"></a-sky>
+    <a-entity class="payload">
+      <a-entity position="-2 0 -2" look-at="[camera]" audio="name: Audio #1; text: Musik starten">
+        <a-entity sound="src:#song" class="pause-on-jump"></a-entity>
+      </a-entity>
+      <a-entity position="2 0 -4" look-at="[camera]">
+        <a-gltf-model *ngFor="let b of gltfModels" id="robot" gltf-model="#robot" scale=".5 .5 .5">
+
+        </a-gltf-model>
+      </a-entity>
+    </a-entity>
+  </a-entity>
+
+  <!--  Foyer  -->
+  <a-entity id="sky-p1" position="0 0 -3.75" data-text="Foyer" nav="next: p0, p2, p4, p34">
+    <a-sky mixin="m-sky" src="#p1" rotation="0 90 0"></a-sky>
+    <a-entity class="payload">
       <!-- 3D Person Test -->
       <!-- <a-box *ngFor="let b of vrBoxes" position="-1 1.5 -4"  scale="0.25 0.5 1" rotation="-45 0 0" color="#4CC3D9"></a-box> -->
-      <a-entity *ngFor="let b of gltfModels" id="person3D_id" gltf-model="#person3D_a" animation-mixer="clip: LookAround; crossFadeDuration: 0.5" position="-2.6 -2 -4.5" scale="4 4 4" interact>
+      <a-entity *ngFor="let b of gltfModels" id="person3D_id" gltf-model="#person3D_a" animation-mixer="clip: LookAround; crossFadeDuration: 0.5" position="-2.6 -2 -4.5" scale="4 4 4" interact cull>
         <a-plane class="hover" opacity="0" shader="flat" color="#666" position="-0.05 0.2 0" look-at="[camera]" width="0.25" height="0.65" visible="false">
           <a-plane class="link" mixin="m-link" look-at="[camera]" position="0 0.5 0" height="0.5" width="0.944" communicate>
             <a-image src="#spc-00" width="0.944" height="0.5"></a-image>
@@ -126,21 +187,190 @@
             </a-entity>
 
             <a-entity position=".38 .17 .2" scale=".4 .4 .4">
-                <a-entity
+              <a-entity
                 class="link"
                 button="imageSrc: #icon-minimize; text: "
                 close-com
                 mixin="m-link hover-scale"></a-entity>
-                <a-circle radius=".12" position="0 .0375 0" color="#666" shader="flat" opacity="1"></a-circle>
+              <a-circle radius=".12" position="0 .0375 0" color="#666" shader="flat" opacity="1"></a-circle>
             </a-entity>
           </a-plane>
         </a-plane>
       </a-entity>
-
-      <a-entity id="GLTF-Test"></a-entity>
     </a-entity>
   </a-entity>
 
+  <a-entity id="sky-p2" position="4.375 0 -3.75" data-text="P2" nav="next: p1, p3">
+    <a-sky mixin="m-sky" src="#p2" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p3" position="4.375 0 -6.875" data-text="P3" nav="next: p2, p4, p6">
+    <a-sky mixin="m-sky" src="#p3" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p4" position="0 0 -6.875" data-text="P4" nav="next: p1, p3, p5">
+    <a-sky mixin="m-sky" src="#p4" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p5" position="-3.4375 0 -6.875" data-text="P5" nav="next: p4, p9">
+    <a-sky mixin="m-sky" src="#p5" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p6" position="4.375 0 -13.125" data-text="P6" nav="next: p3, p7">
+    <a-sky mixin="m-sky" src="#p6" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p7" position="1.6875 0 -13.125" data-text="P7" nav="next: p6, p8">
+    <a-sky mixin="m-sky" src="#p7" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p8" position="1.6875 0 -23.75" data-text="P8" nav="next: p7, p11">
+    <a-sky mixin="m-sky" src="#p8" rotation="0 90 0"></a-sky>
+    <a-entity class="payload">
+      <a-entity id="video_p8" position="2 0 -4" video="name: vid; text: Video" look-at="[camera]">
+        <a-video src="#vid" width="1.6" height=".9" class="pause-on-jump"></a-video>
+      </a-entity>
+    </a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p9" position="-3.4375 0 -16.25" data-text="P9" nav="next: p5, p10">
+    <a-sky mixin="m-sky" src="#p9" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p10" position="-3.4375 0 -22.25" data-text="P10" nav="next: p9, p11">
+    <a-sky mixin="m-sky" src="#p10" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p11" position="-3.4375 0 -23.75" data-text="P11" nav="next: p8, p10, p13">
+    <a-sky mixin="m-sky" src="#p11" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p13" position="-3.4375 0 -32.75" data-text="P13" nav="next:p11, p14">
+    <a-sky mixin="m-sky" src="#p13" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p14" position="1.5625 0 -32.75" data-text="P14" nav="next: p13">
+    <a-sky mixin="m-sky" src="#p14" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p15" position="-5.9375 0 -22.25" data-text="P15" nav="next: p11, p16">
+    <a-sky mixin="m-sky" src="#p15" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p16" position="-8.5625 0 -22.25" data-text="P16" nav="next: p15, p17, p21">
+    <a-sky mixin="m-sky" src="#p16" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p17" position="-11.375 0 -25.5" data-text="P17" nav="next: p16, p18">
+    <a-sky mixin="m-sky" src="#p17" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p18" position="-14.75 0 -25.5" data-text="P18" nav="next: p17, p19">
+    <a-sky mixin="m-sky" src="#p18" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p19" position="-17 0 -25.5" data-text="P19" nav="next: p18, p20">
+    <a-sky mixin="m-sky" src="#p19" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p20" position="-17 0 -22.25" data-text="P20" nav="next: p19, p21, p23">
+    <a-sky mixin="m-sky" src="#p20" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p21" position="-13.25 0 -22.25" data-text="P21" nav="next: p16, p20, p22">
+    <a-sky mixin="m-sky" src="#p21" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p22" position="-13.25 0 -14.375" data-text="P22" nav="next: p21">
+    <a-sky mixin="m-sky" src="#p22" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p23" position="-19.75 0 -22.25" data-text="P23" nav="next: p20, p24">
+    <a-sky mixin="m-sky" src="#p23" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p24" position="-19.75 0 -10.625" data-text="P24" nav="next: p23, p27, p31">
+    <a-sky mixin="m-sky" src="#p24" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p25" position="-5.9375 0 -9.25" data-text="P25" nav="next: p15, p26">
+    <a-sky mixin="m-sky" src="#p25" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p26" position="-7.8125 0 -9.25" data-text="P26" nav="next: p25">
+    <a-sky mixin="m-sky" src="#p26" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p27" position="-27.625 0 -10.625" data-text="P27" nav="next: p24, p28, p29">
+    <a-sky mixin="m-sky" src="#p27" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p28" position="-27.625 0 -8.75" data-text="P28" nav="next: p27">
+    <a-sky mixin="m-sky" src="#p28" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p29" position="-29.25 0 -10.625" data-text="P29" nav="next: p27, p30">
+    <a-sky mixin="m-sky" src="#p29" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p30" position="-29.25 0 -3.75" data-text="P30" nav="next: p29, p31">
+    <a-sky mixin="m-sky" src="#p30" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p31" position="-19.75 0 -3.75" data-text="P31" nav="next: p24, p30, p32, p33">
+    <a-sky mixin="m-sky" src="#p31" rotation="0 90 0"></a-sky>
+    <a-entity class="payload">
+      <a-gltf-model *ngFor="let b of gltfModels" id="person3D_id" gltf-model="#person3D_a" rotation="0 180 0" animation-mixer="clip: LookAround; crossFadeDuration: 0.5" position="1.5 -2 1.5" scale="4 4 4" cull interact>
+
+      </a-gltf-model>
+    </a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p32" position="-19.75 0 -1.875" data-text="P32" nav="next: p31">
+    <a-sky mixin="m-sky" src="#p32" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p33" position="-12.5 0 -3.75" data-text="P33" nav="next: p31, p34">
+    <a-sky mixin="m-sky" src="#p33" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <a-entity id="sky-p34" position="-6.25 0 -3.75" data-text="P34" nav="next: p1, p33">
+    <a-sky mixin="m-sky" src="#p34" rotation="0 90 0"></a-sky>
+    <a-entity class="payload"></a-entity>
+  </a-entity>
+
+  <!-- Neue Bilder Ende -->
+
+  <!-- Alte Bilder:
   <a-entity id="sky-56" position=".02 0 -2" data-text="Empfang" nav="next: 52, 55, 57">
     <a-sky mixin="m-sky" src="#img-56" rotation="0 180 0"></a-sky>
     <a-entity class="payload"></a-entity>
@@ -158,7 +388,7 @@
     <a-entity class="payload"></a-entity>
   </a-entity>
 
-  <!--  A Mitte  -->
+
   <a-entity id="sky-24" position="-11 0 -14" data-text="Cockpit" nav="next: 28, 60, 25">
     <a-sky mixin="m-sky" src="#img-24" rotation="0 180 0"></a-sky>
     <a-entity class="payload"></a-entity>
@@ -170,10 +400,8 @@
   <a-entity id="sky-26" position="-11 0 -5" data-text="A Mitte" nav="next: 25, 27">
     <a-sky mixin="m-sky" src="#img-26" rotation="0 180 0"></a-sky>
     <a-entity class="payload">
-      <!-- Video -->
-      <a-entity id="video" position="0 0 1.5" video="name: Vid; text: Video" look-at="[camera]">
-        <a-video src="#vid" width="1.6" height=".9" class="pause-on-jump"></a-video>
-      </a-entity>
+
+
     </a-entity>
   </a-entity>
   <a-entity id="sky-27" position="-11 0 -2" data-text="A Mitte" nav="next: 26">
@@ -181,7 +409,7 @@
     <a-entity class="payload"></a-entity>
   </a-entity>
 
-  <!-- A01-10 -->
+
   <a-entity id="sky-28" position="-16 0 -14" data-text="A-01" nav="next: 24, 30">
     <a-sky mixin="m-sky" src="#img-28" rotation="0 90 0"></a-sky>
     <a-entity class="payload"></a-entity>
@@ -195,7 +423,7 @@
     <a-entity class="payload"></a-entity>
   </a-entity>
 
-  <!--  A11-20  -->
+
   <a-entity id="sky-60" position="-6 0 -15" data-text="Lab A" nav="next: 58, 24, 61">
     <a-sky mixin="m-sky" src="#img-60" rotation="0 180 0"></a-sky>
     <a-entity class="payload"></a-entity>
@@ -214,7 +442,7 @@
   </a-entity>
 
 
-  <!-- B01-05 -->
+
   <a-entity id="sky-43" position="-24 0 -6" data-text="B-01" nav="next: 35, 41, 45">
     <a-sky mixin="m-sky" src="#img-43" rotation="0 -90 0"></a-sky>
     <a-entity class="payload"></a-entity>
@@ -229,7 +457,7 @@
   </a-entity>
 
 
-  <!--   B11-20 -->
+
   <a-entity id="sky-39" position="-26 0 0" data-text="B Ausgang" nav="next: 41, 51">
     <a-sky mixin="m-sky" src="#img-39" rotation="0 90 0"></a-sky>
     <a-entity class="payload"></a-entity>
@@ -242,6 +470,7 @@
     <a-sky mixin="m-sky" src="#img-49" rotation="0 90 0"></a-sky>
     <a-entity class="payload"></a-entity>
   </a-entity>
+  -->
 
   <!-- Camera + cursor. -->
   <a-entity id="cam-rig" position="0 50 0">
